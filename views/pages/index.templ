@@ -1,0 +1,13 @@
+package pages
+
+import "presthus.dev/views/layout"
+
+templ indexContents() {
+    <div class="flex flex-col-reverse md:flex-row">
+    </div>
+}
+
+templ Index() {
+    @layout.Layout("presthus.dev", indexContents())
+}
+
