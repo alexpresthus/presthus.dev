@@ -36,8 +36,28 @@ templ Layout(title string, contents templ.Component) {
             <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
             <link rel="manifest" href="/static/site.webmanifest" />
-            <link rel="stylesheet" href="/static/style.css" />
             <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script>
+                tailwind.config = {
+                    content: ["views/**/*.templ"],
+                    theme: {
+                        extend: {
+                            colors: {
+                                background: "#111111",
+                                primary: "#fae3d9",
+                                primaryGradient: "#f4c2ac",
+                                accent: "#61c0bf",
+                                accentGradient: "85cfce",
+                                text: {
+                                    primary: "#ffffff",
+                                },
+                            },
+                        },
+                    },
+                    plugins: [],
+                }
+            </script>
         </head>
         <body>
             <div class="w-full h-full min-h-screen bg-background text-primary">
