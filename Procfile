@@ -1,1 +1,1 @@
-web: go install github.com/go-task/task/v3/cmd/task@latest && task build && bin/cmd
+web: npx tailwindcss -i ./css/style.css -o ./static/style.css && bin/cmd
