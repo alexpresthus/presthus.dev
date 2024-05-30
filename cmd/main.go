@@ -20,7 +20,7 @@ func main() {
     http.Handle("/", templ.Handler(pages.Index()))
 
     fs := http.FileServer(http.Dir("./static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+    http.Handle("/static/", http.StripPrefix("/static/", fs))
 
     log.Fatal(http.ListenAndServe(":" + port, nil))
 }
